@@ -1,0 +1,38 @@
+{
+  "name": "@bot-computer/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "build:renderer": "vite build",
+    "build:electron": "tsc -p tsconfig.electron.json && node ./scripts/rename-preload.mjs",
+    "build": "npm run build:renderer && npm run build:electron",
+    "dev": "npm run build && electron .",
+    "start": "npm run build && electron .",
+    "test": "vitest run electron"
+  },
+  "dependencies": {
+    "@bot-computer/agent-runtime": "0.1.0",
+    "@bot-computer/automations": "0.1.0",
+    "@bot-computer/computer-use": "0.1.0",
+    "@bot-computer/connectors": "0.1.0",
+    "@bot-computer/contracts": "0.1.0",
+    "@bot-computer/gateway": "0.1.0",
+    "@bot-computer/mcp-host": "0.1.0",
+    "@bot-computer/permissions": "0.1.0",
+    "@bot-computer/team": "0.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.2.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2"
+  }
+}

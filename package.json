@@ -1,0 +1,20 @@
+{
+  "name": "bot-computer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source local-first agent desktop (chat + MCP + local-exec + computer-use + connectors + gateway + team)",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @bot-computer/contracts -w @bot-computer/permissions -w @bot-computer/mcp-host -w @bot-computer/agent-runtime -w @bot-computer/local-exec -w @bot-computer/computer-use -w @bot-computer/connectors -w @bot-computer/automations -w @bot-computer/team -w @bot-computer/gateway -w @bot-computer/desktop",
+    "test": "npm run test -w @bot-computer/contracts -w @bot-computer/permissions -w @bot-computer/mcp-host -w @bot-computer/agent-runtime -w @bot-computer/local-exec -w @bot-computer/computer-use -w @bot-computer/connectors -w @bot-computer/automations -w @bot-computer/team -w @bot-computer/gateway",
+    "start": "npm run start -w @bot-computer/desktop",
+    "dev": "npm run dev -w @bot-computer/desktop"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
